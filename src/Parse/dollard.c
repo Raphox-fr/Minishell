@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 12:10:34 by thodos-s          #+#    #+#             */
-/*   Updated: 2025/02/05 17:20:48 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/02/07 15:41:04 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,7 @@ int	dollar_traitment(t_info **data, char **rqst)
 	if (fuck_norm(data, &str, rqst) == 0)
 		return (0);
 	free(*rqst);
+	(*rqst) = NULL;
 	if (ft_strlen(str) <= 0)
 	{
 		free(str);
